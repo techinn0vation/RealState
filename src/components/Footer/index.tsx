@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 import { Headline } from 'components/Ui/Headline'
 

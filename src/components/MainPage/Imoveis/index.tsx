@@ -22,14 +22,10 @@ import ExternoA from 'assets/img/EXT1.webp'
 import ExternoB from 'assets/img/EXT2.webp'
 import ExternoC from 'assets/img/EXT3.webp'
 import ExternoD from 'assets/img/EXT4.webp'
-import ExternoE from 'assets/img/EXT6.webp'
 import Fascino1 from 'assets/img/fascino1.jpg'
 import Fascino2 from 'assets/img/fascino2.jpeg'
 import Fascino3 from 'assets/img/fascino3.jpg'
 import Fascino4 from 'assets/img/fascino4.png'
-import INTJ from 'assets/img/INT10.webp'
-import INTK from 'assets/img/INT11.webp'
-import INTI from 'assets/img/INT9.webp'
 
 export default function Imoveis() {
   return (
