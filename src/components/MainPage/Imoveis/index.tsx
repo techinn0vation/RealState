@@ -1,3 +1,5 @@
+import { useRouter } from 'next/navigation'
+
 import { Button } from 'components/Ui/Button'
 import { Headline } from 'components/Ui/Headline'
 
@@ -28,6 +30,7 @@ import Fascino3 from 'assets/img/fascino3.jpg'
 import Fascino4 from 'assets/img/fascino4.png'
 
 export default function Imoveis() {
+  const navigation = useRouter()
   return (
     <WrapperImoveis>
       <ContentImoveis>
@@ -169,7 +172,11 @@ export default function Imoveis() {
           </BlockImoveis>
           {/*  */}
         </ViewImoveis>
-        <Button text='ver mais' icon='' />
+        <Button
+          onClick={() => navigation.push('https://wa.link/bi4dwn')}
+          text='ver mais'
+          icon=''
+        />
       </ContentImoveis>
     </WrapperImoveis>
   )
