@@ -5,7 +5,7 @@ export default function Home() {
   const title = 'Assessoria e gestão imobiliária'
   const description =
     'Transformando sonhos em moradias com excelência e dedicação'
-  const imageUrl = 'assets/img/Home.webp'
+  const imageUrl = 'assets/img/icon.webp'
   const pageUrl = ''
 
   return (

@@ -12,7 +12,7 @@ import {
   RowHamburger
 } from './styles'
 
-import Logo from 'assets/img/Ciplart.webp'
+import Logo from 'assets/img/logo.webp'
 
 export default function Sidebar() {
   const [isActive, setIsActive] = useState(false)

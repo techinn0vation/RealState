@@ -10,21 +10,25 @@ import {
   WrapperImoveis
 } from './styles'
 
+import Avanti4 from 'assets/img/AVANTI - Área de Lazer.jpg'
+import Avanti1 from 'assets/img/AVANTI - Fachada.jpg'
+import Avanti2 from 'assets/img/AVANTI - Lobby.jpg'
+import Avanti3 from 'assets/img/AVANTI - Piscina.jpg'
+import Ciplart1 from 'assets/img/ciplart1.webp'
+import Ciplart2 from 'assets/img/ciplart2.webp'
+import Ciplart3 from 'assets/img/ciplart3.webp'
+import Ciplart4 from 'assets/img/ciplart4.webp'
 import ExternoA from 'assets/img/EXT1.webp'
 import ExternoB from 'assets/img/EXT2.webp'
 import ExternoC from 'assets/img/EXT3.webp'
 import ExternoD from 'assets/img/EXT4.webp'
 import ExternoE from 'assets/img/EXT6.webp'
-import INTA from 'assets/img/INT1.webp'
+import Fascino1 from 'assets/img/fascino1.jpg'
+import Fascino2 from 'assets/img/fascino2.jpeg'
+import Fascino3 from 'assets/img/fascino3.jpg'
+import Fascino4 from 'assets/img/fascino4.png'
 import INTJ from 'assets/img/INT10.webp'
 import INTK from 'assets/img/INT11.webp'
-import INTB from 'assets/img/INT2.webp'
-import INTC from 'assets/img/INT3.webp'
-import INTD from 'assets/img/INT4.webp'
-import INTE from 'assets/img/INT5.webp'
-import INTF from 'assets/img/INT6.webp'
-import INTG from 'assets/img/INT7.webp'
-import INTH from 'assets/img/INT8.webp'
 import INTI from 'assets/img/INT9.webp'
 
 export default function Imoveis() {
@@ -76,25 +80,25 @@ export default function Imoveis() {
             />
             <InnerImoveis>
               <InnerFrameImoveis
-                src={INTA}
+                src={Ciplart1}
                 alt='imovel'
                 priority={true}
                 id='img-5'
               />
               <InnerFrameImoveis
-                src={INTB}
+                src={Ciplart2}
                 alt='imovel'
                 priority={true}
                 id='img-6'
               />
               <InnerFrameImoveis
-                src={INTC}
+                src={Ciplart3}
                 alt='imovel'
                 priority={true}
                 id='img-7'
               />
               <InnerFrameImoveis
-                src={INTD}
+                src={Ciplart4}
                 alt='imovel'
                 priority={true}
                 id='img-8'
@@ -109,25 +113,25 @@ export default function Imoveis() {
             />
             <InnerImoveis>
               <InnerFrameImoveis
-                src={INTE}
+                src={Fascino1}
                 alt='imovel'
                 priority={true}
                 id='img-9'
               />
               <InnerFrameImoveis
-                src={INTF}
+                src={Fascino2}
                 alt='imovel'
                 priority={true}
                 id='img-9'
               />
               <InnerFrameImoveis
-                src={INTG}
+                src={Fascino3}
                 alt='imovel'
                 priority={true}
                 id='img-10'
               />
               <InnerFrameImoveis
-                src={INTH}
+                src={Fascino4}
                 alt='imovel'
                 priority={true}
                 id='img-11'
@@ -142,25 +146,25 @@ export default function Imoveis() {
             />
             <InnerImoveis>
               <InnerFrameImoveis
-                src={INTI}
+                src={Avanti1}
                 alt='imovel'
                 priority={true}
                 id='img-12'
               />
               <InnerFrameImoveis
-                src={INTJ}
+                src={Avanti2}
                 alt='imovel'
                 priority={true}
                 id='img-13'
               />
               <InnerFrameImoveis
-                src={INTK}
+                src={Avanti3}
                 alt='imovel'
                 priority={true}
                 id='img-14'
               />
               <InnerFrameImoveis
-                src={ExternoE}
+                src={Avanti4}
                 alt='imovel'
                 priority={true}
                 id='img-15'

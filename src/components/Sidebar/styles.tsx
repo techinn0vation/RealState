@@ -42,7 +42,6 @@ export const WrapperSidebar = styled.nav`
 export const LogoBranding = styled(Image)`
   width: 16rem;
   height: auto;
-  filter: invert(1);
 `
 export const ContentSidebar = styled.main`
   width: 100%;

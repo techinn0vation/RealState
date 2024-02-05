@@ -50,21 +50,27 @@ export default function Footer() {
         </BlockFooter>
         <BlockFooter>
           <ContentSocialFields>
-            <LinkSocialField href='#'>
+            <LinkSocialField
+              href='https://www.facebook.com/profile.php?id=100089661757737'
+              target='_blank'
+            >
               <InnerSocialField>
                 <FaFacebookF />
               </InnerSocialField>
             </LinkSocialField>
-            <LinkSocialField href='#'>
+            <LinkSocialField
+              href='https://www.instagram.com/gestao_negocios_imobiliarios_?igsh=MWY3bG1yaHhveGJvcw=='
+              target='_blank'
+            >
               <InnerSocialField>
                 <FaInstagram />
               </InnerSocialField>
             </LinkSocialField>
-            <LinkSocialField href='#'>
+            {/* <LinkSocialField href='#'>
               <InnerSocialField>
                 <FaTwitter />
               </InnerSocialField>
-            </LinkSocialField>
+            </LinkSocialField> */}
           </ContentSocialFields>
         </BlockFooter>
         <BlockFooter>
