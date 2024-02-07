@@ -1,26 +1,27 @@
-import { Hero, MainPage, CustomHead } from 'components/GeralComponents'
+import CustomHead from 'components/CustomHead'
+import { Hero, MainHome } from 'components/GeralComponents'
 
 export default function Home() {
   // Configuração Head customizado
-  const title = 'Assessoria e gestão imobiliária'
+  const title = 'Grupo gestão empreendimentos'
+  const imageUrl = 'assets/img/Brand.webp'
   const description =
     'Transformando sonhos em moradias com excelência e dedicação'
-  const imageUrl = 'assets/img/icon.webp'
-  const pageUrl = ''
+  const pageUrl = 'lp.grupogestaoempreendimentos.com.br'
 
   return (
     <>
       {/*Head Customizado Pagina Inicial */}
       <CustomHead
         title={title}
-        description={description}
         image={imageUrl}
+        description={description}
         url={pageUrl}
       />
 
       {/*Componentes Pagina Inicial  */}
       <Hero />
-      <MainPage />
+      <MainHome />
     </>
   )
 }

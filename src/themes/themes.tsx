@@ -12,7 +12,7 @@ export const theme = {
     OpacityAzul: 'rgba(28, 36, 60, 0.48)'
   },
   screenSize: {
-    XS: '320px',
+    XS: '390px',
     MD: '667px',
     LG: '990px',
     XL: '1200px'

@@ -1,5 +1,4 @@
-import CustomHead from 'components/CustomHead'
 import Hero from 'components/Hero'
-import MainPage from 'components/MainPage'
+import MainHome from 'components/MainHome'
 
-export { Hero, MainPage, CustomHead }
+export { Hero, MainHome }

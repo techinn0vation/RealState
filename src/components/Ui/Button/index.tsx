@@ -1,18 +1,8 @@
-import { ReactNode } from 'react'
-
-import DisplayText from '../Text'
-
-interface PropButton {
+interface PropsButton {
   text: string
-  icon: ReactNode
-  onClick?: () => void
+  onClick: () => void
 }
 
-export const Button = ({ text, icon, onClick }: PropButton) => {
-  return (
-    <button onClick={onClick}>
-      <DisplayText text={text} />
-      {icon}
-    </button>
-  )
+export default function Button({ text }: PropsButton) {
+  return <button>{text}</button>
 }

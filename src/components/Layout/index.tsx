@@ -3,11 +3,10 @@
 import React, { ReactNode } from 'react'
 
 import Footer from 'components/Footer'
-import ScrollPage from 'components/ScrollPage'
-import Sidebar from 'components/Sidebar'
+import Header from 'components/Header'
 import { ThemeProvider } from 'styled-components'
 
-import { Content } from './styles'
+import { Container } from './styles'
 
 import StyledComponentsRegistry from 'app/registry'
 import { mainFont } from 'styles/FontConfig'
@@ -23,12 +22,11 @@ export const Layout = ({ children }: LayoutProps) => {
       <ThemeProvider theme={theme}>
         <html lang='pt-br'>
           <body className={mainFont.className}>
-            <ScrollPage />
-            <Content>
-              <Sidebar />
+            <Container>
+              <Header />
               {children}
               <Footer />
-            </Content>
+            </Container>
           </body>
         </html>
         <GlobalStyle />

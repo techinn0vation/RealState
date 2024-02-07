@@ -1,9 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
-import { Headline } from 'components/Ui/Headline'
+import Headline from 'components/Ui/Headline'
 
 import {
   BlockFooter,
@@ -15,32 +14,8 @@ import {
 } from './styles'
 
 export default function Footer() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY
-    const element = document.getElementById('footer')
-
-    if (element) {
-      const elementPosition = element.offsetTop
-
-      if (scrollPosition > elementPosition - window.innerHeight / 2) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
-      }
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
   return (
-    <WrapperFooter className={isVisible ? 'visible' : ''} id='footer'>
+    <WrapperFooter>
       <ContentFooter>
         <BlockFooter>
           <Headline
@@ -66,11 +41,6 @@ export default function Footer() {
                 <FaInstagram />
               </InnerSocialField>
             </LinkSocialField>
-            {/* <LinkSocialField href='#'>
-              <InnerSocialField>
-                <FaTwitter />
-              </InnerSocialField>
-            </LinkSocialField> */}
           </ContentSocialFields>
         </BlockFooter>
         <BlockFooter>
