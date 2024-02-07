@@ -13,7 +13,7 @@ export default function Hero() {
           title='explore, descubra. Sua nova jornada começa aqui.'
           text='descubra um universo de opções e encontre o lar que sempre sonhou. Cada cantinho é uma porta aberta para uma nova história.'
         />
-        <Button text='conhecer' />
+        <Button text='conhecer' onClick={() => {}} />
       </ContentHero>
     </WrapperHero>
   )
