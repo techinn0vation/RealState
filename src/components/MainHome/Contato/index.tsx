@@ -27,7 +27,7 @@ export default function Contato() {
               <InnerInput placeholder='Número de telefone' />
 
               <BlockMessage placeholder='Escreva sua mensagem' />
-              <Button text='enviar' />
+              <Button text='enviar' onClick={() => {}} />
             </InnerContato>
           </BlockContato>
         </ViewContato>

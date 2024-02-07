@@ -89,7 +89,7 @@ export default function Imoveis() {
           </BlockImoveis>
           {/*  */}
         </ViewImoveis>
-        <Button text='ver mais' />
+        <Button onClick={() => {}} text='ver mais' />
       </ContentImoveis>
     </WrapperImoveis>
   )
