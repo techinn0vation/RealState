@@ -89,7 +89,12 @@ export default function Imoveis() {
           </BlockImoveis>
           {/*  */}
         </ViewImoveis>
-        <Button text='ver mais' />
+        <Button
+          text='ver mais'
+          onClick={function (): void {
+            throw new Error('Function not implemented.')
+          }}
+        />
       </ContentImoveis>
     </WrapperImoveis>
   )

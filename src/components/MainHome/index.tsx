@@ -1,9 +1,9 @@
 'use client'
 
+import Agencia from './Agencia'
 import Comentarios from './Comentarios'
 import Contato from './Contato'
 import Imoveis from './Imoveis'
-import Localizacao from './Localizacao'
 import Servicos from './Servicos'
 import { ContentMainHome, WrapperMainHome } from './styles'
 
@@ -15,7 +15,7 @@ export default function MainHome() {
         <Servicos />
         <Comentarios />
         <Contato />
-        <Localizacao />
+        <Agencia />
       </ContentMainHome>
     </WrapperMainHome>
   )
