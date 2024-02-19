@@ -10,7 +10,7 @@ import {
   WrapperFooter
 } from './styles'
 
-import Logo from 'assets/img/Logo.webp'
+import Logo from 'assets/img/logo.webp'
 
 export default function Footer() {
   return (
