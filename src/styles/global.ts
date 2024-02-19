@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     border: none;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   }
   html{
     font-size: 62.5%;
@@ -17,8 +19,8 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     background: ${(props) => props.theme.colors.Branco};
     user-select: none;
+    scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-    /* -webkit-user-select: none; */
 
     &::-webkit-scrollbar {
       width: 0;

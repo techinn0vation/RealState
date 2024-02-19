@@ -1,6 +1,6 @@
 import { ContentHeader, LogoBranding, WrapperHeader } from './styles'
 
-import Logo from 'assets/img/logo.webp'
+import Logo from 'assets/img/Logo.webp'
 
 export default function Header() {
   return (
