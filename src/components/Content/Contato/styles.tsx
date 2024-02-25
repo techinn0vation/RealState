@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const WrapperContato = styled.section`
   width: 100%;
   max-width: 108rem;
+  margin: 0 auto;
 
   display: grid;
   place-items: center;
@@ -16,37 +17,30 @@ export const ContentContato = styled.main`
   align-items: start;
   gap: 6rem;
 
-  & > div:nth-child(1) {
-    width: auto;
+  & > h1 {
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 7.5rem;
+    color: ${(props) => props.theme.colors.Preto};
+    text-align: center;
 
-    display: grid;
-    place-items: center;
-    align-items: center;
-
-    h1 {
-      font-size: 5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 7.5rem;
-      color: ${(props) => props.theme.colors.Preto};
-      text-align: center;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-
-    p {
-      display: none;
+    &::first-letter {
+      text-transform: capitalize;
     }
   }
 
-  @media (min-width: ${(props) => props.theme.screenSize.MD}) {
-    padding: 2rem;
-  }
+  @media (min-width: ${(props) => props.theme.screenSize.LG}) {
+    opacity: 0;
+    transform: translateX(3rem);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
 
-  @media (min-width: ${(props) => props.theme.screenSize.XL}) {
-    padding: 6rem;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `
 export const ViewContato = styled.div`
@@ -54,7 +48,10 @@ export const ViewContato = styled.div`
 
   display: grid;
   place-items: center;
-  align-items: center;
+  align-items: start;
+
+  gap: 0.3rem;
+  padding: 0 2rem;
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
     place-items: end;
@@ -75,7 +72,7 @@ export const ViewContato = styled.div`
       max-width: 36rem;
       background-color: ${(props) => props.theme.colors.Branco};
       box-shadow: 0 0 1.6rem 0 ${(props) => props.theme.colors.ShadowCard};
-
+      padding: 2rem;
       z-index: 1;
 
       border-top: solid 0.5rem ${(props) => props.theme.colors.Marrom};
@@ -100,7 +97,6 @@ export const BlockFormulario = styled.div`
   display: grid;
   place-items: center;
   align-items: start;
-  padding: 2rem;
   gap: 2rem;
 
   button {
@@ -129,7 +125,7 @@ export const BlockFormulario = styled.div`
     }
   }
 `
-export const InnerBlockFields = styled.div`
+export const BlockFields = styled.div`
   width: 100%;
 
   display: grid;

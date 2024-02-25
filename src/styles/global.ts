@@ -21,7 +21,6 @@ export const GlobalStyle = createGlobalStyle`
     user-select: none;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-
     &::-webkit-scrollbar {
       width: 0;
     }

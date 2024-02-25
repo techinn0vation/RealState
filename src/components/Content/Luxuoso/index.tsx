@@ -1,33 +1,59 @@
-import Headline from 'components/Ui/Headline'
+import { useState, useEffect } from 'react'
+
+import Title from 'components/Ui/CustomTitle'
 
 import {
-  BlockGridLuxuoso,
-  ContentLuxuoso,
-  FrameLuxuoso,
-  ViewGridLuxuoso,
-  WrapperLuxuoso
+  BlockHidden,
+  ContentGridImovel,
+  FrameGrid,
+  ViewGrid,
+  WrapperGridImovel
 } from './styles'
 
-import FascinoDois from 'assets/img/FascinoDois.webp'
-import FascinoQuatro from 'assets/img/FascinoQuatro.webp'
-import FascinoTres from 'assets/img/FascinoTres.webp'
-import FascinoUm from 'assets/img/FascinoUm.webp'
+import FascinoV1 from 'assets/img/Fascino_V1.webp'
+import FascinoV2 from 'assets/img/Fascino_V2.webp'
+import FascinoV3 from 'assets/img/Fascino_V3.webp'
+import FascinoV4 from 'assets/img/Fascino_V4.webp'
 
 export default function Luxuoso() {
-  return (
-    <WrapperLuxuoso>
-      <ContentLuxuoso>
-        <Headline title='luxuoso' text='' />
+  const [isVisible, setIsVisible] = useState(false)
 
-        <ViewGridLuxuoso>
-          <BlockGridLuxuoso />
-          <FrameLuxuoso src={FascinoUm} alt='fascino' priority={true} />
-          <FrameLuxuoso src={FascinoDois} alt='fascino' priority={true} />
-          <FrameLuxuoso src={FascinoTres} alt='fascino' priority={true} />
-          <FrameLuxuoso src={FascinoQuatro} alt='fascino' priority={true} />
-          <BlockGridLuxuoso />
-        </ViewGridLuxuoso>
-      </ContentLuxuoso>
-    </WrapperLuxuoso>
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY
+    const element = document.getElementById('luxuoso')
+
+    if (element) {
+      const elementPosition = element.offsetTop
+
+      if (scrollPosition > elementPosition - window.innerHeight / 1) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  return (
+    <WrapperGridImovel>
+      <ContentGridImovel className={isVisible ? 'visible' : ''} id='luxuoso'>
+        <Title title='luxuoso' />
+
+        <ViewGrid>
+          <FrameGrid src={FascinoV1} alt='fascino' priority={true} />
+          <BlockHidden />
+          <FrameGrid src={FascinoV2} alt='fascino' priority={true} />
+          <BlockHidden />
+          <FrameGrid src={FascinoV4} alt='fascino' priority={true} />
+          <FrameGrid src={FascinoV3} alt='fascino' priority={true} />
+        </ViewGrid>
+      </ContentGridImovel>
+    </WrapperGridImovel>
   )
 }

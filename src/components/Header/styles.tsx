@@ -5,12 +5,11 @@ import styled from 'styled-components'
 export const WrapperHeader = styled.header`
   width: 100%;
   max-width: 108rem;
+  margin: 0 auto;
 
   display: grid;
   place-items: center;
   align-items: center;
-
-  z-index: 1;
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
     position: relative;
@@ -19,7 +18,7 @@ export const WrapperHeader = styled.header`
       content: '';
       position: absolute;
       width: 16rem;
-      height: 200vh;
+      height: 120vh;
       background-color: ${(props) => props.theme.colors.Marrom};
       top: 0;
       left: 0;
@@ -32,9 +31,9 @@ export const WrapperHeader = styled.header`
       width: 1.5rem;
       height: 100%;
       background-color: ${(props) => props.theme.colors.Marrom};
-      top: 100%;
+      top: 50%;
       right: 0;
-      transform: translate(-50%, 100%);
+      transform: translate(0, 25rem);
     }
   }
 `

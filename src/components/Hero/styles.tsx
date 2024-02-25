@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Back from 'assets/img/Build.webp'
+import BgHero from 'assets/img/BG-Hero.webp'
 
 export const WrapperHero = styled.section`
   width: 100%;
@@ -8,8 +8,7 @@ export const WrapperHero = styled.section`
 
   display: grid;
   place-items: center;
-  align-items: start;
-
+  align-items: center;
   overflow: hidden;
 
   &::before {
@@ -17,10 +16,13 @@ export const WrapperHero = styled.section`
     position: fixed;
     width: 100%;
     height: 100%;
-    background: url(${Back.src}) center no-repeat fixed;
+    background: url(${BgHero.src}) center no-repeat fixed;
     background-size: cover;
     top: 0;
     left: 0;
+
+    transform: translateZ(0);
+    z-index: -1;
   }
 
   &::after {
@@ -31,6 +33,9 @@ export const WrapperHero = styled.section`
     background-color: ${(props) => props.theme.colors.Shadow};
     top: 0;
     left: 0;
+
+    transform: translateZ(0);
+    z-index: -1;
   }
 `
 export const ContentHero = styled.main`

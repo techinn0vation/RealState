@@ -17,7 +17,7 @@ interface ParallaxProps {
   baseVelocity: number
 }
 
-export default function ParallaxText({
+export default function Scroller({
   children,
   baseVelocity = 100
 }: ParallaxProps) {

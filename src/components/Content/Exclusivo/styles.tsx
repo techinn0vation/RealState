@@ -5,6 +5,7 @@ import styled from 'styled-components'
 export const WrapperExclusivo = styled.section`
   width: 100%;
   max-width: 108rem;
+  margin: 0 auto;
 
   display: grid;
   place-items: center;
@@ -17,65 +18,65 @@ export const ContentExclusivo = styled.main`
   place-items: center;
   align-items: start;
   gap: 6rem;
-  padding: 6rem 0;
 
-  & > div:nth-child(1) {
-    width: auto;
+  & > h1 {
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 7.5rem;
+    color: ${(props) => props.theme.colors.Preto};
+    text-align: center;
 
-    display: grid;
-    place-items: center;
-    align-items: center;
-
-    h1 {
-      font-size: 5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 7.5rem;
-      color: ${(props) => props.theme.colors.Preto};
-      text-align: center;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-
-    p {
-      display: none;
+    &::first-letter {
+      text-transform: capitalize;
     }
   }
 
-  @media (min-width: ${(props) => props.theme.screenSize.MD}) {
-    padding: 2rem;
-  }
+  @media (min-width: ${(props) => props.theme.screenSize.LG}) {
+    opacity: 0;
+    transform: translateX(3rem);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
 
-  @media (min-width: ${(props) => props.theme.screenSize.XL}) {
-    padding: 6rem;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `
-export const ViewGridExclusivo = styled.div`
+export const ViewExclusivo = styled.div`
   width: 100%;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   place-items: center;
-  align-items: center;
+  align-items: start;
+
   gap: 0.3rem;
-  padding: 0.3rem;
+  padding: 0 0.3rem;
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (min-width: ${(props) => props.theme.screenSize.LG}) {
+    padding: 0 6rem;
+  }
 `
-export const BlockExclusivo = styled.div`
+export const BlockCardExclusivo = styled.div`
   width: 100%;
   height: 25rem;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
   align-items: center;
+
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 0.9rem;
 
   &:nth-child(1) {
     background-color: ${(props) => props.theme.colors.Marrom};
@@ -98,10 +99,12 @@ export const BlockExclusivo = styled.div`
 `
 export const HeaderCardExclusivo = styled.div`
   width: 100%;
+  height: auto;
 
   display: grid;
   place-items: center;
   align-items: center;
+  gap: 2rem;
 `
 export const BodyCardExclusivo = styled.div`
   width: 100%;
@@ -111,28 +114,16 @@ export const BodyCardExclusivo = styled.div`
   place-items: center;
   align-items: start;
 
-  & > div:nth-child(1) {
-    width: 100%;
+  & > p {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.1rem;
+    color: ${(props) => props.theme.colors.Preto};
+    text-align: center;
 
-    display: grid;
-    place-items: center;
-    align-items: start;
-
-    h1 {
-      font-size: 1.4rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 2.1rem;
-      color: ${(props) => props.theme.colors.Preto};
-      text-align: center;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-
-    p {
-      display: none;
+    &::first-letter {
+      text-transform: capitalize;
     }
   }
 `
@@ -140,9 +131,8 @@ export const FrameCardExclusivo = styled(Image)`
   width: 6rem;
   height: auto;
 
-  object-fit: fill;
-  -o-object-fit: fill;
-
+  object-fit: contain;
+  -o-object-fit: contain;
   object-position: center;
   -o-object-position: center;
 `

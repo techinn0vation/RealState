@@ -7,6 +7,7 @@ export const WrapperMotion = styled.div`
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
+  margin-bottom: -10rem;
 `
 export const ContentMotion = styled(motion.div)`
   display: flex;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Background from 'assets/img/FascinoDois.webp'
+import FascinoV2 from 'assets/img/Fascino_V2.webp'
 
 export const WrapperLetreiro = styled.section`
   width: 100%;
@@ -36,7 +36,7 @@ export const ContentLetreiro = styled.main`
         text-transform: capitalize;
       }
 
-      background: url(${Background.src}) right no-repeat fixed;
+      background: url(${FascinoV2.src}) right no-repeat fixed;
       background-size: cover;
       -webkit-background-clip: text;
       background-clip: text;

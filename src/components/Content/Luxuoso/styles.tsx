@@ -2,82 +2,79 @@ import Image from 'next/image'
 
 import styled from 'styled-components'
 
-export const WrapperLuxuoso = styled.section`
+export const WrapperGridImovel = styled.section`
   width: 100%;
   max-width: 108rem;
+  margin: 0 auto;
 
   display: grid;
   place-items: center;
   align-items: start;
 `
-export const ContentLuxuoso = styled.main`
+export const ContentGridImovel = styled.main`
   width: 100%;
 
   display: grid;
   place-items: center;
   align-items: start;
   gap: 6rem;
-  padding: 6rem 0;
 
-  & > div:nth-child(1) {
-    width: auto;
+  & > h1 {
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 7.5rem;
+    color: ${(props) => props.theme.colors.Preto};
+    text-align: center;
 
-    display: grid;
-    place-items: center;
-    align-items: center;
-
-    h1 {
-      font-size: 5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 7.5rem;
-      color: ${(props) => props.theme.colors.Preto};
-      text-align: center;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
-    }
-
-    p {
-      display: none;
+    &::first-letter {
+      text-transform: capitalize;
     }
   }
 
-  @media (min-width: ${(props) => props.theme.screenSize.MD}) {
-    padding: 2rem;
-  }
+  @media (min-width: ${(props) => props.theme.screenSize.LG}) {
+    opacity: 0;
+    transform: translateX(3rem);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
 
-  @media (min-width: ${(props) => props.theme.screenSize.XL}) {
-    padding: 6rem;
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `
-export const ViewGridLuxuoso = styled.div`
+export const ViewGrid = styled.div`
   width: 100%;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   place-items: center;
-  align-items: center;
+  align-items: start;
+
   gap: 0.3rem;
-  padding: 0.3rem;
+  padding: 0 0.3rem;
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (min-width: ${(props) => props.theme.screenSize.LG}) {
+    padding: 0 6rem;
+  }
 `
-export const FrameLuxuoso = styled(Image)`
+export const FrameGrid = styled(Image)`
   width: 100%;
   height: auto;
 
-  object-fit: fill;
-  -o-object-fit: fill;
-
+  object-fit: contain;
+  -o-object-fit: contain;
   object-position: center;
   -o-object-position: center;
 `
-export const BlockGridLuxuoso = styled.div`
+export const BlockHidden = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${(props) => props.theme.colors.Marrom};

@@ -1,11 +1,13 @@
+import { useState, useEffect } from 'react'
+
 import Button from 'components/Ui/Button'
-import Headline from 'components/Ui/Headline'
+import Title from 'components/Ui/CustomTitle'
 
 import {
+  BlockFields,
   BlockFormulario,
   BlockMensagem,
   ContentContato,
-  InnerBlockFields,
   InnerField,
   ViewContato,
   WrapperContato
@@ -14,23 +16,47 @@ import {
 import { mainFont } from 'styles/FontConfig'
 
 export default function Contato() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY
+    const element = document.getElementById('contato')
+
+    if (element) {
+      const elementPosition = element.offsetTop
+
+      if (scrollPosition > elementPosition - window.innerHeight / 1) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <WrapperContato>
-      <ContentContato>
-        <Headline title='contato' text='' />
+      <ContentContato className={isVisible ? 'visible' : ''} id='contato'>
+        <Title title='contato' />
+
         <ViewContato>
           <BlockFormulario>
-            <InnerBlockFields>
-              <InnerField type='text' placeholder='Nome' />
-              <InnerField type='text' placeholder='E-mail' />
-              <InnerField type='tel' placeholder='Telefone' />
-            </InnerBlockFields>
-            <InnerBlockFields>
-              <BlockMensagem
-                placeholder='Digite sua mensagem'
-                className={mainFont.className}
-              />
-            </InnerBlockFields>
+            <BlockFields>
+              <InnerField placeholder='Nome' type='text' />
+              <InnerField placeholder='E-mail' type='text' />
+              <InnerField placeholder='Tel' type='tel' />
+            </BlockFields>
+            <BlockMensagem
+              className={mainFont.className}
+              placeholder='Digite sua mensagem'
+            />
+
             <Button text='enviar' onClick={() => {}} />
           </BlockFormulario>
         </ViewContato>
