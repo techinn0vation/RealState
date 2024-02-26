@@ -69,7 +69,7 @@ export default function Serviços() {
             </HeaderCardServiços>
             <BodyCardServiços>
               <Headline
-                title='gestão imobiliária'
+                title='assessoria'
                 text='facilitamos a aquisição, agilizando partes burocráticas e demoradas.'
               />
             </BodyCardServiços>
