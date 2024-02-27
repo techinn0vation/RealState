@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+import ButtonZap from 'components/Ui/ButtonZap'
 import Title from 'components/Ui/CustomTitle'
 import Headline from 'components/Ui/Headline'
 
@@ -16,7 +17,6 @@ import {
 import Assessoria from 'assets/img/Assessoria.webp'
 import Gestao from 'assets/img/Gestao.webp'
 import Padrao from 'assets/img/Padrao.webp'
-import ButtonZap from 'components/Ui/ButtonZap'
 
 export default function Serviços() {
   const [isVisible, setIsVisible] = useState(false)
@@ -47,7 +47,7 @@ export default function Serviços() {
     <WrapperServiços>
       <ContentServiços className={isVisible ? 'visible' : ''} id='serviços'>
         <Title title='serviços' />
-        <ButtonZap text='Fale com um consultor' link='https://wa.link/v7gkh1'/>
+        <ButtonZap text='Fale com um consultor' link='https://wa.link/v7gkh1' />
 
         <ViewServiços>
           <BlockServiços>

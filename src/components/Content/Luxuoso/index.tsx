@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+import ButtonZap from 'components/Ui/ButtonZap'
 import Title from 'components/Ui/CustomTitle'
 
 import {
@@ -14,8 +15,6 @@ import FascinoV1 from 'assets/img/Fascino_V1.webp'
 import FascinoV2 from 'assets/img/Fascino_V2.webp'
 import FascinoV3 from 'assets/img/Fascino_V3.webp'
 import FascinoV4 from 'assets/img/Fascino_V4.webp'
-import Button from 'components/Ui/Button'
-import ButtonZap from 'components/Ui/ButtonZap'
 
 export default function Luxuoso() {
   const [isVisible, setIsVisible] = useState(false)
@@ -45,7 +44,7 @@ export default function Luxuoso() {
   return (
     <WrapperGridImovel>
       <ContentGridImovel className={isVisible ? 'visible' : ''} id='luxuoso'>
-        <ButtonZap text='Saiba mais' link='https://wa.link/v7gkh1'/>
+        <ButtonZap text='Saiba mais' link='https://wa.link/v7gkh1' />
         <Title title='luxuoso' />
 
         <ViewGrid>
