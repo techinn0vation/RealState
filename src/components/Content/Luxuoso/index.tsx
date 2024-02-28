@@ -44,7 +44,7 @@ export default function Luxuoso() {
   return (
     <WrapperGridImovel>
       <ContentGridImovel className={isVisible ? 'visible' : ''} id='luxuoso'>
-        <ButtonZap text='Saiba mais' link='https://wa.link/v7gkh1' />
+        <ButtonZap text='Saiba mais' link='https://wa.link/w7szos' />
         <Title title='luxuoso' />
 
         <ViewGrid>

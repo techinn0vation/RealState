@@ -47,7 +47,7 @@ export default function Serviços() {
     <WrapperServiços>
       <ContentServiços className={isVisible ? 'visible' : ''} id='serviços'>
         <Title title='serviços' />
-        <ButtonZap text='Fale com um consultor' link='https://wa.link/v7gkh1' />
+        <ButtonZap text='Fale com um consultor' link='https://wa.link/w7szos' />
 
         <ViewServiços>
           <BlockServiços>

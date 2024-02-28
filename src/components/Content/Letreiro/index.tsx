@@ -6,7 +6,7 @@ import { ContentLetreiro, WrapperLetreiro } from './styles'
 export default function Letreiro() {
   return (
     <WrapperLetreiro>
-      <ButtonZap text='Tire suas Dúvidas' link='https://wa.link/v7gkh1' />
+      <ButtonZap text='Tire suas Dúvidas' link='https://wa.link/w7szos' />
 
       <ContentLetreiro>
         <Headline title='fascino' text='' />
